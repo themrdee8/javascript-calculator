@@ -1,0 +1,85 @@
+#display {
+    text-align: right;
+}
+
+:root {
+    --white: white;
+    --light-gray: #EAEADD;
+    --black-gray: #616158;
+    --black: #2B2A2E;
+    --yellow: #EACE00;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#calculator {
+    display: grid;
+    grid-template-areas: 
+    "display display display display"
+    "clear negative percentage divide" 
+    "seven eight nine multiply"
+    "four five six subtract"
+    "one two three add"
+    "zero zero decimal equals";
+    grid-template-columns: repeat(4, 100px);
+    gap: 15px;
+    padding: 50px;
+    padding-top: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: var(--black);
+    border-radius: 40px;
+}
+
+.light-gray {
+    background-color: var(--light-gray);
+}
+
+.black-gray {
+    background-color: var(--black-gray);
+    color: var(--white);
+}
+
+.yellow {
+    background-color: var(--yellow);
+}
+
+button {
+    height: 100px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: transform 0.1s ease-in-out;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#answer {
+    height: 40px;
+    font-size: 40px;
+    font-family: Geneva, Tahoma, sans-serif;
+}
+
+#expression {
+    font-size: 20px;
+    color: var(--black-gray);
+    height: 30px;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#display {
+    grid-area: display;
+}
